@@ -4,6 +4,7 @@ ruby '2.2.0'
 gem 'rails', '4.2.0'
 gem 'bootstrap-sass', '3.3.3'
 gem 'sprockets', '2.12.3'
+gem 'bcrypt-ruby', '~>3.1'
 
 group :development, :test do
   gem 'sqlite3'
@@ -13,6 +14,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.44.0'
   gem 'capybara', '2.4.4'
+  gem 'factory_girl_rails', '4.4.1'
 end
 
 gem 'sass-rails', '~> 5.0'
