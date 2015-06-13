@@ -8,8 +8,9 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       # ユーザーをサインインさせ、ユーザーページ (show) にリダイレクトする。
     else
-      # エラーメッセージを表示し、サインインフォームを再描画する。
-    end  
+      flash.now[:error] = 'Invalid email/password combination'
+      render 'new'
+    end
   end
 
   def destroy
